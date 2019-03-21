@@ -25,12 +25,23 @@ class HomePage extends StatelessWidget {
           FlatButton(
             child: Text('Logout', style: TextStyle(fontSize: 17.0, color: Colors.white)),
             onPressed: () => _signOut(context),
-          )
-        ],
+          ),
+          FloatingActionButton(
+        onPressed: _pushAddTodoScreen,
+        tooltip: 'Add task',
+        child: new Icon(Icons.add)
+    )
+        ]
       ),
       body: Container(
         child: Center(child: Text('Welcome', style: TextStyle(fontSize: 32.0))),
       ),
     );
   }
+
+  
+
+  void _pushAddTodoScreen() {
+  }
 }
+
